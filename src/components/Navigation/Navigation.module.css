@@ -1,0 +1,24 @@
+.nav {
+  display: flex;
+  gap: 32px;
+}
+
+.navMenu {
+  font-weight: 500;
+  font-size: 16px;
+
+  /* line-height: 24px; */
+  line-height: 1.5;
+  text-align: center;
+  color: var(--main);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navMenu:hover {
+  color: var(--button-hover);
+}
+
+.active {
+  color: var(--button-hover);
+}

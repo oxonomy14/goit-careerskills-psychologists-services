@@ -1,0 +1,21 @@
+.header {
+    background-color: var(--inputs);
+}
+
+.wrapper {
+  padding: 24px 64px;
+
+}
+
+.appBar {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 450px;
+}
+
+.navigationWrapper {
+  margin-right: auto;
+}
