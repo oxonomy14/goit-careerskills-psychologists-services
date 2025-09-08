@@ -5,7 +5,7 @@ const Layout = () => {
   return (
     <>
       <header>
-        <AppBar />
+        {/* <AppBar /> */}
       </header>
       <main>
         <Outlet />

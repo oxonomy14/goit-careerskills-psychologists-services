@@ -1,9 +1,65 @@
 :root {
   --font-family: 'Inter', sans-serif;
-  --color-bg: #fbfbfb; 
-  --color-text-primary: #191a15; 
-  --color-text-secondary: rgba(25, 26, 21, 0.5);
-  --color-text-muted: #8a8a89; 
-  --color-primary: #54be96; 
-  --color-secondary: rgba(84, 190, 150, 0.2);
+  --bg-main-color: #fbfbfb;
+  --bg-secondary-color: #f3f3f3;
+  --text-strong: #191a15;
+  --text-normal: rgba(25, 26, 21, 0.5);
+  --text-muted: #8a8a89;
+  --primary-color: #54be96;
+  --secondary-color: #36a379;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  overflow-x: hidden;
+}
+
+body.theme-blue {
+  --font-family: 'Inter', sans-serif;
+  --bg-color: #fbfbfb;
+  --text-strong: #191a15;
+  --text-normal: rgba(25, 26, 21, 0.5);
+  --text-muted: #8a8a89;
+  --primary-color: #3470ff;
+  --secondary-color: rgba(52, 112, 255, 0.2);
+}
+
+section {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+  border: none;
 }
