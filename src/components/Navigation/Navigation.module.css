@@ -1,24 +1,53 @@
 .nav {
   display: flex;
-  gap: 32px;
+  gap: 40px;
 }
 
 .navMenu {
-  font-weight: 500;
-  font-size: 16px;
 
-  /* line-height: 24px; */
-  line-height: 1.5;
-  text-align: center;
-  color: var(--main);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  color: var(--text-strong);
   text-decoration: none;
   cursor: pointer;
+    position: relative;
+  display: inline-flex;
+ 
+  /* padding-bottom: 12px;  */
+ 
 }
 
-.navMenu:hover {
-  color: var(--button-hover);
+
+
+.navMenu::before {
+  content: "";
+  position: absolute;
+
+  left: 50%;             
+  bottom: 4px;            
+  transform: translateX(-50%); 
+ 
+  width: 8px;
+  height: 8px;
+  
+  background-color: var(--primary-color); 
+  
+  -webkit-mask: url('icons/ellipse.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  mask: url('icons/ellipse.svg') no-repeat center;
+  mask-size: contain;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.active {
-  color: var(--button-hover);
+.navMenu:hover::before,
+.navMenu:focus::before
+{
+  opacity: 1; 
+}
+
+.navMenu.active::before {
+  opacity: 1;
 }

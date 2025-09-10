@@ -7,15 +7,19 @@ const AppBar = () => {
     <header className={css.header}>
       <Container>
         <div className={css.wrapper}>
-          <div className={css.appBar}>
+      
             <div className={css.logo}>
-              <img src="/icon/logo.svg" alt="logo" />
+           <p className={css.logoText}>psychologists.<span>services</span></p>
             </div>
-            <div className={css.navigationWrapper}>
+            <div className={css.navigation}>
               <Navigation />
             </div>
+            <div className={css.registration}>
+              <button className={css.btnLogin}>Log In</button>
+              <button className={css.btnRegistration}>Registration</button>
+            </div>
           </div>
-        </div>
+
       </Container>
     </header>
   );

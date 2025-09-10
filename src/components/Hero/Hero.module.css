@@ -1,6 +1,6 @@
 .hero {
-  background-color: var(--bg-main-color);
-  min-height: calc(100dvh - 72px);
+
+  /* min-height: calc(100dvh - 96px); */
 }
 
 .wrapper {
@@ -135,7 +135,7 @@
   font-family: var(--font-family);
   font-weight: 700;
   font-size: clamp(16px, 1.5vw, 24px);
-  color: #fbfbfb;
+  color: var(--bg-main-color);
 }
 
 .null {
@@ -173,7 +173,7 @@
   border-radius: 10px;
   width: 40px;
   height: 40px;
-  background: #4535af;
+  background-color: var(--icon-question);
   transform: rotate(-15deg);
   display: flex;
   align-items: center;
@@ -193,7 +193,7 @@
   border-radius: 10px;
   width: 48px;
   height: 48px;
-  background: #fbc75e;
+  background-color: var(--icon-people);
   transform: rotate(15deg);
   display: flex;
   align-items: center;

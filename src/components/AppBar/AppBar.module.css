@@ -1,21 +1,66 @@
 .header {
-    background-color: var(--inputs);
+  border-bottom: 1px solid rgba(25, 26, 21, 0.1);
 }
 
 .wrapper {
-  padding: 24px 64px;
-
-}
-
-.appBar {
+  padding-top: 24px;
+  padding-bottom: 24px;
   display: flex;
   align-items: center;
+
 }
 
 .logo {
-  margin-right: 450px;
+  margin-right: 130px;
 }
 
-.navigationWrapper {
-  margin-right: auto;
+.logoText {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: var(--primary-color);
+}
+
+.logoText span {
+  font-weight: 600;
+
+  color: var(--text-strong);
+}
+
+.navigation {
+}
+
+.registration {
+  display: flex;
+  gap: 8px;
+margin-left: auto;
+}
+
+.btnLogin {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  color: var(--text-strong);
+  border: 1px solid rgba(25, 26, 21, 0.2);
+  border-radius: 30px;
+  padding: 14px 39px;
+  width: 124px;
+  height: 48px;
+  white-space: nowrap;
+    background-color: var(--bg-main-color);
+}
+
+.btnRegistration {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  color: var(--bg-main-color);
+  border-radius: 30px;
+  padding: 14px 40px;
+  width: 171px;
+  height: 48px;
+  background-color: var(--primary-color);
 }
