@@ -7,16 +7,20 @@
   padding-bottom: 24px;
   display: flex;
   align-items: center;
+  gap: clamp(20px, 8vw, 130px);
 
 }
 
 .logo {
-  margin-right: 130px;
+  /* margin-right: 130px; */
+   /* margin-inline-end: clamp(20px, 8vw, 130px); */
+  flex-shrink: 0;
 }
 
 .logoText {
   font-weight: 700;
-  font-size: 20px;
+  /* font-size: 20px; */
+   font-size: clamp(16px, 1.25vw, 20px);
   line-height: 120%;
   letter-spacing: -0.02em;
   color: var(--primary-color);
@@ -29,15 +33,19 @@
 }
 
 .navigation {
+    flex: 1; 
+  display: flex;
+
 }
 
 .registration {
   display: flex;
   gap: 8px;
 margin-left: auto;
+flex-shrink: 0;
 }
 
-.btnLogin {
+/* .btnLogin {
   font-weight: 500;
   font-size: 16px;
   line-height: 125%;
@@ -63,4 +71,62 @@ margin-left: auto;
   width: 171px;
   height: 48px;
   background-color: var(--primary-color);
+} */
+
+
+.btnLogin,
+.btnRegistration {
+  font-weight: 500;
+  font-size: clamp(14px, 1vw, 16px); 
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  border-radius: 30px;
+  padding: clamp(10px, 1.2vw, 14px) clamp(20px, 2vw, 40px); 
+  height: auto; 
+  white-space: nowrap;
+}
+
+.btnLogin {
+  color: var(--text-strong);
+  border: 1px solid rgba(25, 26, 21, 0.2);
+  background-color: var(--bg-main-color);
+}
+
+.btnRegistration {
+  color: var(--bg-main-color);
+  background-color: var(--primary-color);
+}
+
+  .btnBurger {
+    display: none;
+
+  }
+
+@media only screen and (max-width: 767px) {
+
+  .btnBurger {
+    display: flex;
+    margin-left: auto;
+    align-self: center;
+    cursor: pointer;
+    background-color: var(--bg-main-color);
+  }
+
+.burgerIcon {
+fill: none;
+stroke: var(--primary-color);
+}
+
+.burgerIcon:hover {
+fill: none;
+stroke: var(--secondary-color);
+ transition: opacity 0.3s ease;
+}
+
+.navigation {
+  display: none;
+}
+.registration {
+  display: none;
+}
 }

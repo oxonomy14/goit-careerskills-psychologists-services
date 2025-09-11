@@ -15,5 +15,8 @@
     <symbol id="icon-ellipse" viewBox="0 0 36 32">
 <path d="M34 16c0 8.837-7.163 16-16 16s-16-7.163-16-16c0-8.837 7.163-16 16-16s16 7.163 16 16z"></path>
 </symbol>
+<symbol id="icon-burger" viewBox="0 0 31 32">
+<path stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.2929" d="M7.273 9.536h16.485M7.273 21.172h16.485M7.273 15.354h16.485"></path>
+</symbol>
   </defs>
 </svg>

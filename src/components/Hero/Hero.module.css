@@ -1,6 +1,6 @@
 .hero {
 
-  /* min-height: calc(100dvh - 96px); */
+
 }
 
 .wrapper {
@@ -39,13 +39,6 @@
   margin-bottom: 40px;
 }
 .heroButton {
-  /* border-radius: 30px;
-  padding: 18px 50px;
-  width: 235px;
-  height: 60px;
-  background-color: var(--primary-color);
-  transition: background-color 0.9s ease; */
-
   border-radius: clamp(20px, 2vw, 30px);
   padding: clamp(12px, 1.5vw, 18px) clamp(24px, 4vw, 50px);
   width: clamp(180px, 30vw, 235px);
