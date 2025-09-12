@@ -102,7 +102,7 @@ flex-shrink: 0;
 
   }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1023px) {
 
   .btnBurger {
     display: flex;
@@ -123,10 +123,28 @@ stroke: var(--secondary-color);
  transition: opacity 0.3s ease;
 }
 
+.btnClose {
+     display: flex;
+    margin-left: auto;
+    align-self: center;
+    cursor: pointer;
+    background-color: var(--bg-main-color);
+}
+
+.closeIcon {
+  fill: none;
+stroke: var(--primary-color);
+width: 32px;
+height: 32px;
+}
+
 .navigation {
   display: none;
 }
 .registration {
   display: none;
 }
+
+
+
 }

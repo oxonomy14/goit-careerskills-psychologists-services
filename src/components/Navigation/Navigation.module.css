@@ -60,3 +60,22 @@
 .navMenu.active::before {
   opacity: 1;
 }
+
+@media only screen and (max-width: 1023px) {
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+}
+
+.navMenu {
+
+justify-content: center;
+ 
+ 
+ 
+}
+
+}

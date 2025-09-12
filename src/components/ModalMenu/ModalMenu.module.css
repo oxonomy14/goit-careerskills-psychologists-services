@@ -1,0 +1,41 @@
+.wrapper {
+  padding-top: 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.registration {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.btnLogin {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  color: var(--text-strong);
+  border: 1px solid rgba(25, 26, 21, 0.2);
+  border-radius: 30px;
+  padding: 14px 39px;
+  width: 124px;
+  height: 48px;
+  white-space: nowrap;
+  background-color: var(--bg-main-color);
+}
+
+.btnRegistration {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  color: var(--bg-main-color);
+  border-radius: 30px;
+  padding: 14px 40px;
+  width: 171px;
+  height: 48px;
+  background-color: var(--primary-color);
+}

@@ -31,7 +31,7 @@ const Hero = () => {
             <div className={css.imgHeroContainer}>
               <img
                 className={css.imgHero}
-                  srcset="/images/imgMain-desk@1x.webp 1x, /images/imgMain-desk@2x.webp 2x"
+                  srcSet="/images/imgMain-desk@1x.webp 1x, /images/imgMain-desk@2x.webp 2x"
                 src="/images/imgMain-desk@1x.webp"
                 alt="psychologists services"
               />                       
