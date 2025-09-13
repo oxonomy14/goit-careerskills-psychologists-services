@@ -1,0 +1,30 @@
+.btnLoadMore {
+  border: 1px solid var(--gray-light);
+  border-radius: 200px;
+  padding: 16px 30px;
+  width: 145px;
+  height: 56px;
+      margin-right: 371px;
+}
+
+.btnLoadMore span {
+  font-weight: 500;
+  font-size: 16px;
+
+  /* line-height: 24px; */
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: var(--main);
+}
+
+.btnLoadMore:hover
+ {
+border: 1px solid var(--button-hover);
+} 
+
+@media only screen and (min-width: 768px) {
+ 
+}
+
+@media only screen and (min-width: 1440px) {
+}

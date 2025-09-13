@@ -1,0 +1,64 @@
+.cardItem {
+    display: flex;
+    gap: 24px;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgba(84, 190, 150, 0.2);
+  border-radius: 30px;
+  width: 120px;
+  height: 120px;
+    position: relative;
+}
+
+.avatarImg {
+  border-radius: 15px;
+  width: 96px;
+  height: 96px;
+
+}
+
+.circleIcon {
+     fill: var(--secondary-color); 
+     position: absolute;
+     top: 9px;
+     right: 14px;
+
+}
+
+.infoContainer {
+    flex: 1; 
+}
+
+.infoRow {
+    display: flex;
+  justify-content: space-between;
+    align-items: center; 
+  width: 100%;
+    
+}
+
+.infoLeftBox {
+
+font-weight: 500;
+font-size: 16px;
+line-height: 150%;
+color: var(--text-muted);
+}
+
+.infoRightBox {
+    display: flex;
+
+}
+
+.btnFavorite {
+    background-color: var(--bg-main-color);
+}
+
+.favoriteIcon {
+    stroke: var(--text-strong);
+    fill: none;
+}
