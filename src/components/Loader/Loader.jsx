@@ -7,7 +7,8 @@ const Loader = ({loading}) => {
   return (
     <div className={`${css.loaderBackdrop} ${loading ? css.active : ""}`}>
      
-      <PropagateLoader  color="#e44848"
+      <PropagateLoader  
+      color="var(--secondary-color)"
         loading
         size={20}
         aria-label="Loading Spinner"

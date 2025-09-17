@@ -1,17 +1,17 @@
 import css from './LoadMore.module.css';
 
-const LoadMore = ({ page, pages, onLoadMore }) => {
+const LoadMore = ({ handleLoadMore, loadingMore }) => {
   return (
-   
-      <button
-        className={css.btnLoadMore}
-        type="button"
-        onClick={onLoadMore}
-        disabled={page >= pages}
-      >
-        <span>Load More</span>
-      </button>
-   
+    <div className={css.LoadMore}>
+    <button
+      className={css.btnLoadMore}
+      onClick={handleLoadMore}
+      disabled={loadingMore}
+      type='button'
+    >
+      {loadingMore ? 'Loading...' : 'Load More'}
+    </button>
+    </div>
   );
 };
 

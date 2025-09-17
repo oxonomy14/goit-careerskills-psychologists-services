@@ -3,15 +3,16 @@ import GridItem from '../GridItem/GridItem';
 import Grid from '../Grid/Grid';
 import CardItem from '../CardItem/CardItem';
 
-const Catalog = () => {
+const Catalog = ({psychologists}) => {
 
     return (
         <>
-            <Grid>       
-          <GridItem >
-            <CardItem />
+            <Grid>  
+              {psychologists.map((item)=> (    
+          <GridItem key={item.id}>
+            <CardItem item={item}/>
           </GridItem>
-     
+     ))} 
       </Grid>
         </>
     );

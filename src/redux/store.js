@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { campersReducer } from './campersSlice';
-import {camperReducer} from "./camperSlice";
-import { filterReducer } from './filterSlice';
+import { psychologistsReducer } from './psychologistsSlice';
+import favoritesReducer from "./favoritesSlice";
+
 import {
   persistStore,
   persistReducer,
@@ -16,30 +16,34 @@ import storage from 'redux-persist/lib/storage';
 
 //const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-const persistConfigCampers = {
-  key: 'campers',
+const persistConfigPsychologists = {
+  key: 'psychologists',
   version: 1,
   storage,
-};
+  whitelist: ['loading', 'loadingMore'], 
 
-const persistConfigFilter = {
-  key: 'filters',
-  version: 1,
-  storage,
 };
 
 
-const persistConfigCamper = {
-  key: 'camperDetail',
-  version: 1,
-  storage,
-};
+// const persistConfigFilter = {
+//   key: 'filters',
+//   version: 1,
+//   storage,
+// };
+
+
+// const persistConfigCamper = {
+//   key: 'camperDetail',
+//   version: 1,
+//   storage,
+// };
 
 export const store = configureStore({
   reducer: {
-    campersList: persistReducer(persistConfigCampers, campersReducer),
-    filter: persistReducer(persistConfigFilter, filterReducer),
-    camper: persistReducer(persistConfigCamper, camperReducer),
+    psychologistsList: persistReducer(persistConfigPsychologists, psychologistsReducer),
+    favorites: favoritesReducer,
+    // filter: persistReducer(persistConfigFilter, filterReducer),
+    // camper: persistReducer(persistConfigCamper, camperReducer),
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
