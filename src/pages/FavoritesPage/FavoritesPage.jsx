@@ -16,6 +16,7 @@ import {
 import Loader from '../../components/Loader/Loader.jsx';
 import LoadMore from '../../components/LoadMore/LoadMore.jsx';
 import { selectFavorites } from '../../redux/favoritesSlice';
+import { toast } from "react-toastify";
 
 const filterOptions = {
   aToZ: "aToZ",
@@ -45,6 +46,12 @@ const FavoritesPage = () => {
       dispatch(fetchPsychologists({ pageSize: 4 }));
     }
   }, [dispatch, psychologists.length]);
+
+  useEffect(() => {
+    if (error) {
+      toast.error(`Error: ${error}`);
+    }
+  }, [error]);
 
   // Психологи, які обрані
   const favoritePsychologists = psychologists.filter(psych =>
@@ -91,7 +98,7 @@ const FavoritesPage = () => {
     setActiveFilter(value);
   };
 
-  if (error) return <p>Помилка: {error}</p>;
+  
 
   // Якщо немає обраних психологів
   if (favoritePsychologists.length === 0) {
@@ -101,7 +108,7 @@ const FavoritesPage = () => {
         <Container>
           <div className={css.wrapper}>
             <div className={css.catalogPage}>
-              <p className={css.empty}>У вас немає обраних психологів.</p>
+              <p className={css.empty}>You don't have any psychologists of your choice</p>
             </div>
           </div>
         </Container>

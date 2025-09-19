@@ -25,6 +25,10 @@ export const db = getDatabase(app);
 export const fetchPsychologists = createAsyncThunk(
   "psychologists/fetchPsychologists",
   async ({ lastKey = null, pageSize = 4 } = {}, { rejectWithValue }) => {
+
+ // штучна помилка
+  //  throw new Error("Тестова помилка завантаження");
+
     try {
       let q;
 

@@ -15,6 +15,8 @@ import {
 } from "../../redux/psychologistsSelector";
 import LoadMore from '../../components/LoadMore/LoadMore.jsx';
 import Loader from '../../components/Loader/Loader.jsx';
+import { toast } from "react-toastify";
+
 
 
 
@@ -54,6 +56,11 @@ const [activeFilter, setActiveFilter] = useState(filterOptions.all);
   };
   //console.log("psychologists:", psychologists);
   
+  useEffect(() => {
+    if (error) {
+      toast.error(`Error: ${error}`);
+    }
+  }, [error]);
 
 const filteredPsychologists = [...psychologists]
   .filter((p) => {
@@ -88,7 +95,7 @@ const filteredPsychologists = [...psychologists]
 
   
    if (!psychologists) return null;
-  if (error) return <p>Помилка: {error}</p>;
+
 
   return (
     <section>
