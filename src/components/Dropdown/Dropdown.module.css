@@ -1,0 +1,16 @@
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* щоб зайняв всю висоту */
+}
+
+.iconChevron {
+  fill: none;
+  stroke: var(--bg-main-color);
+  
+  }
+
+
+
+

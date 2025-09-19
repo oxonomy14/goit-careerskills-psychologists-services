@@ -71,3 +71,19 @@ export const fetchPsychologists = createAsyncThunk(
     }
   }
 );
+
+export const fetchPsychologistById = createAsyncThunk(
+  "psychologists/fetchById",
+  async (id, { rejectWithValue }) => {
+    try {
+      const snapshot = await get(ref(db, `psychologists/${id}`));
+      if (snapshot.exists()) {
+        return { id, ...snapshot.val() };
+      } else {
+        return rejectWithValue("Psychologist not found");
+      }
+    } catch (error) {
+      return rejectWithValue(error.message || "Error loading");
+    }
+  }
+);

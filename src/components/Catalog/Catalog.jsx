@@ -8,9 +8,9 @@ const Catalog = ({psychologists}) => {
     return (
         <>
             <Grid>  
-              {psychologists.map((item)=> (    
-          <GridItem key={item.id}>
-            <CardItem item={item}/>
+              {psychologists.map((card)=> (    
+          <GridItem key={card.id}>
+            <CardItem card={card}/>
           </GridItem>
      ))} 
       </Grid>

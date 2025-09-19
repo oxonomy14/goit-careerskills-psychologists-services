@@ -1,0 +1,17 @@
+.btnFavorite {
+
+      background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.favoriteIcon {
+    stroke: var(--text-strong);
+    fill: none;
+    transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+.btnFavorite.active .favoriteIcon {
+  fill: var(--primary-color);
+    stroke: var(--primary-color); 
+}

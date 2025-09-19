@@ -1,23 +1,16 @@
 import css from './CardItem.module.css';
 import { Link } from 'react-router-dom';
-
-import { useDispatch, useSelector } from "react-redux";
-import { toggleFavorite, selectFavorites } from "../../redux/favoritesSlice";
+import BtnFavorite from '../BtnFavorite/BtnFavorite';
 
 
 
-const CardItem = ({item}) => {
-
-  const dispatch = useDispatch();
-const favorites = useSelector(selectFavorites);
-  const isFavorite = favorites.includes(item.id);
-
+const CardItem = ({card}) => {
 
   return (
-    <>
+   
       <div className={css.cardItem}>
         <div className={css.avatar}>
-          <img className={css.avatarImg} src={item.avatar_url} alt={item.name} />
+          <img className={css.avatarImg} src={card.avatar_url} alt={card.name} />
           <svg width={14} height={14} className={css.circleIcon}>
             <use href="/icons/sprite.svg#icon-circle"></use>
           </svg>
@@ -30,50 +23,40 @@ const favorites = useSelector(selectFavorites);
                 <svg width={16} height={16} className={css.starIcon}>
                   <use href="/icons/sprite.svg#icon-star"></use>
                 </svg>
-                <p>Rating: {item.rating}</p>
+                <p>Rating: {card.rating}</p>
               </div>
               <svg width={2} height={16} className={css.vLineIcon}>
                 <use href="/icons/sprite.svg#icon-vLine"></use>
               </svg>
               <p className={css.infoPrice}>
-                Price / 1 hour: <span>{item.price_per_hour}$</span>
+                Price / 1 hour: <span>{card.price_per_hour}$</span>
               </p>
-              <button type="button" 
-              
-               className={`${css.btnFavorite} ${isFavorite ? css.active : ""}`}
-              // onClick={toggleFavorite}
-              onClick={() => dispatch(toggleFavorite(item.id))}
-              >
-                <svg width={26} height={22} 
-                    className={css.favoriteIcon}
-             >
-                  <use href="/icons/sprite.svg#icon-favorite"></use>
-                </svg>
-              </button>
+      
+                  <BtnFavorite card={card} />
             </div>
           </div>
-          <p className={css.name}>{item.name}</p>
+          <p className={css.name}>{card.name}</p>
           <ul className={css.list}>
             <li className={css.item}>
-              Experience: <span>{item.experience}</span>
+              Experience: <span>{card.experience}</span>
             </li>
             <li className={css.item}>
-              License: <span>{item.license}</span>
+              License: <span>{card.license}</span>
             </li>
             <li className={css.item}>
-              Specialization: <span>{item.specialization}</span>
+              Specialization: <span>{card.specialization}</span>
             </li>
             <li className={css.item}>
-              Initial_consultation: <span>{item.initial_consultation}</span>
+              Initial_consultation: <span>{card.initial_consultation}</span>
             </li>
           </ul>
           <p className={css.description}>
-           {item.about}
+           {card.about}
           </p>
-     <Link className={css.readMore}>Read more</Link>
+     <Link className={css.readMore} to={`/cards/${card.id}`}>Read more</Link>
         </div>
       </div>
-    </>
+  
   );
 };
 

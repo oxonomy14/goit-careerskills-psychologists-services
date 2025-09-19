@@ -1,6 +1,6 @@
 // psychologistsSlice.js
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchPsychologists } from './realTimeDb';
+import { fetchPsychologists, fetchPsychologistById } from './realTimeDb';
 
 const psychologistsSlice = createSlice({
   name: 'psychologists',
@@ -15,6 +15,7 @@ const psychologistsSlice = createSlice({
   reducers: {},
   extraReducers: builder => {
     builder
+     // list pcychologists
       .addCase(fetchPsychologists.pending, (state, action) => {
         if (!action.meta.arg.lastKey) state.loading = true;
         else state.loadingMore = true;
@@ -35,7 +36,23 @@ const psychologistsSlice = createSlice({
           action.payload?.message || action.error?.message || 'Unknown error';
         state.loading = false;
         state.loadingMore = false;
+      })
+ // one pcychologist
+      .addCase(fetchPsychologistById.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(fetchPsychologistById.fulfilled, (state, action) => {
+        const exists = state.items.find(p => p.id === action.payload.id);
+        if (!exists) state.items.push(action.payload);
+        state.loading = false;
+      })
+      
+      .addCase(fetchPsychologistById.rejected, (state, action) => {
+        state.error = action.payload || action.error.message;
+        state.loading = false;
       });
+
   },
 });
 

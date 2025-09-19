@@ -4,6 +4,19 @@
    
 }
 
+.dropDownTitle {
+
+font-weight: 500;
+font-size: 14px;
+line-height: 129%;
+color: var(--text-muted);
+margin-bottom: 8px;
+}
+
+.dropDown {
+    margin-bottom: 32px;
+}
+
 .catalogPage {
     margin-bottom: 64px;
 }
