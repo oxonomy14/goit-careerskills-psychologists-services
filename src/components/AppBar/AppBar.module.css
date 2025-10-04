@@ -45,33 +45,57 @@ margin-left: auto;
 flex-shrink: 0;
 }
 
-/* .btnLogin {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 125%;
-  letter-spacing: -0.01em;
-  color: var(--text-strong);
-  border: 1px solid rgba(25, 26, 21, 0.2);
-  border-radius: 30px;
-  padding: 14px 39px;
-  width: 124px;
-  height: 48px;
-  white-space: nowrap;
-    background-color: var(--bg-main-color);
+.person {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
 }
 
-.btnRegistration {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 125%;
-  letter-spacing: -0.01em;
-  color: var(--bg-main-color);
-  border-radius: 30px;
-  padding: 14px 40px;
-  width: 171px;
-  height: 48px;
-  background-color: var(--primary-color);
-} */
+.iconBoxPerson {
+border-radius: 10px;
+width: 40px;
+height: 40px;
+padding: 8px;
+background-color: var(--primary-color); 
+margin-right: 14px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.personIcon {
+fill: var(--bg-main-color);
+ display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+}
+
+.userName {
+
+font-weight: 500;
+font-size: 16px;
+line-height: 125%;
+letter-spacing: -0.01em;
+color: var(--text-strong);
+margin-right: 28px;
+}
+
+.btnLogout {
+  font-family: var(--font-family);
+font-weight: 500;
+font-size: 16px;
+line-height: 125%;
+letter-spacing: -0.01em;
+color: var(--text-strong);
+border: 1px solid rgba(25, 26, 21, 0.2);
+border-radius: 30px;
+padding: 14px 39px;
+width: 135px;
+height: 48px;
+background-color: transparent;
+}
 
 
 .btnLogin,

@@ -1,6 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { psychologistsReducer } from './psychologistsSlice';
 import favoritesReducer from "./favoritesSlice";
+import authReducer from "./authSlice";
 
 import {
   persistStore,
@@ -14,8 +15,6 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
-//const persistedReducer = persistReducer(persistConfig, rootReducer);
-
 const persistConfigPsychologists = {
   key: 'psychologists',
   version: 1,
@@ -25,25 +24,25 @@ const persistConfigPsychologists = {
 };
 
 
-// const persistConfigFilter = {
-//   key: 'filters',
-//   version: 1,
-//   storage,
-// };
+const persistFavorites = {
+  key: 'favorites',
+  version: 1,
+  storage,
+};
 
 
-// const persistConfigCamper = {
-//   key: 'camperDetail',
-//   version: 1,
-//   storage,
-// };
+const persistAuth = {
+  key: 'auth',
+  version: 1,
+  storage,
+};
 
 export const store = configureStore({
   reducer: {
     psychologistsList: persistReducer(persistConfigPsychologists, psychologistsReducer),
-    favorites: favoritesReducer,
-    // filter: persistReducer(persistConfigFilter, filterReducer),
-    // camper: persistReducer(persistConfigCamper, camperReducer),
+    favorites: persistReducer(persistFavorites, favoritesReducer),
+    auth: persistReducer(persistAuth, authReducer),
+    
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
