@@ -4,6 +4,7 @@ import {Navigate} from "react-router-dom"
 
 import Layout from './components/Layout/Layout';
 import Loader from './components/Loader/Loader';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute'; 
 
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
@@ -25,7 +26,14 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="cards" element={<CardsPage />} />
           <Route path="cards/:cardId" element={<CardPage />} />
-             <Route path="favorites" element={<FavoritesPage />} />
+             <Route
+            path="favorites"
+            element={
+              <PrivateRoute>
+                <FavoritesPage />
+              </PrivateRoute>
+            }
+          />
        favorites
           <Route path="*" element={<NotFound />} />
         </Route>
@@ -34,4 +42,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

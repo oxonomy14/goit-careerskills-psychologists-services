@@ -1,5 +1,5 @@
 import css from './LoginForm.module.css';
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { toast } from 'react-hot-toast';
@@ -27,11 +27,7 @@ const LoginForm = ({ onClose}) => {
     const [showPassword, setShowPassword] = useState(false);
   
 
-  // useEffect(() => {
-  //   if (error) {
-  //     toast.error(error);
-  //   }
-  // }, [error]);
+
 
 const handleSubmit = async (values, { resetForm }) => {
   console.log("Login attempt", values); // додай це для перевірки

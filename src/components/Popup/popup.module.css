@@ -1,0 +1,232 @@
+.overlay {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(25, 26, 21, 0.6); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; 
+}
+
+.modal {
+border-radius: 30px;
+width: 600px;
+height:auto;
+background-color: var(--bg-main-color);
+padding: 64px;
+position: relative;
+}
+
+.btnClose {
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    background-color: transparent;
+
+}
+
+.closeIcon {
+    stroke: var(--text-strong);
+}
+
+.title {
+font-weight: 500;
+font-size: 40px;
+line-height: 120%;
+letter-spacing: -0.02em;
+color: var(--text-strong);
+margin-bottom: 20px;
+}
+
+.descr {
+font-weight: 400;
+font-size: 16px;
+line-height: 125%;
+color: rgba(25, 26, 21, 0.5);
+margin-bottom: 40px;
+}
+
+.infoBox {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    margin-bottom: 40px;
+}
+
+
+.avatar {
+    border-radius: 15px;
+width: 44px;
+height: 44px;
+}
+
+.infoDesc {
+font-weight: 500;
+font-size: 12px;
+line-height: 133%;
+color: var(--text-muted);
+margin-bottom: 4px;
+}
+
+.name {
+font-weight: 500;
+font-size: 16px;
+line-height: 150%;
+color: var(--text-strong);
+}
+
+.form {
+
+}
+
+.fieldWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.field {
+
+}
+
+.fieldRow {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.fieldTime {
+    position: relative;
+}
+
+.inputPhone {
+border: 1px solid rgba(25, 26, 21, 0.1);
+border-radius: 12px;
+padding: 16px 18px 16px 18px;
+width: 232px;
+height: 52px;
+
+font-weight: 400;
+font-size: 16px;
+line-height: 125%;
+color: var(--text-strong);
+}
+
+.inputTime {
+border: 1px solid rgba(25, 26, 21, 0.1);
+border-radius: 12px;
+padding: 16px 18px 16px 18px;
+width: 232px;
+height: 52px;
+
+font-weight: 400;
+font-size: 16px;
+line-height: 125%;
+color: var(--text-strong);
+
+}
+
+.input {
+border: 1px solid rgba(25, 26, 21, 0.1);
+border-radius: 12px;
+padding: 16px 18px 16px 18px;
+width: 472px;
+height: 52px;
+
+font-weight: 400;
+font-size: 16px;
+line-height: 125%;
+color: var(--text-strong);
+
+}
+
+
+
+.input::placeholder {
+    color: var(--text-strong);
+}
+
+.textarea {
+border: 1px solid rgba(25, 26, 21, 0.1);
+border-radius: 12px;
+padding: 16px 18px 80px 18px;
+width: 472px;
+height: 116px;
+font-weight: 400;
+font-size: 16px;
+line-height: 125%;
+color: var(--text-strong);
+ min-height: 116px;
+  resize: none;
+}
+
+.textarea::placeholder {
+    color: var(--text-strong);
+}
+
+
+.error {
+padding: 10px;
+font-weight: 400;
+font-size: 14px;
+line-height: 125%;
+color: var(--text-muted);
+}
+
+.timeIcon{
+    fill: none;
+    stroke: var(--text-strong);
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.btn {
+font-weight: 500;
+font-size: 16px;
+line-height: 125%;
+letter-spacing: -0.01em;
+color: #fbfbfb;
+border-radius: 30px;
+padding: 16px 217px;
+width: 472px;
+height: 52px;
+background-color: var(--primary-color);
+}
+
+:global(.timeDropdown) {
+  background-color: red !important;
+  border-radius: 12px !important;
+  box-shadow: 0 20px 69px 0 rgba(0, 0, 0, 0.07) !important;
+  font-family: var(--font-family) !important;
+  overflow: hidden;
+}
+
+:global(.timeDropdown .react-datepicker__time-container) {
+  border: none !important;
+  width: 100% !important;
+}
+
+:global(.timeDropdown .react-datepicker__time-box) {
+  width: 100% !important;
+  background-color: #f9f9f9 !important;
+}
+
+:global(.timeDropdown .react-datepicker__time-list-item) {
+  padding: 10px 16px !important;
+  cursor: pointer !important;
+  font-size: 16px !important;
+}
+
+:global(.timeDropdown .react-datepicker__time-list-item--selected) {
+  background-color: #3470ff !important;
+  color: #fff !important;
+}
+
+:global(.timeDropdown .react-datepicker__time-list-item:hover) {
+  background-color: #e9efff !important;
+}

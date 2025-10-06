@@ -1,12 +1,16 @@
 import css from './Carddetail.module.css';
 import BtnFavorite from '../BtnFavorite/BtnFavorite';
+import Popup from '../Popup/Popup';
+import { useState } from 'react';
 
 const CardDetail = ({ cardId, card }) => {
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
   if (!card) {
     return <p>Психолога з ID {cardId} не знайдено</p>;
   }
 
   return (
+    <>
     <div className={css.cardItem}>
       <div className={css.avatar}>
         <img className={css.avatarImg} src={card.avatar_url} alt={card.name} />
@@ -69,9 +73,12 @@ const CardDetail = ({ cardId, card }) => {
             </li>))}
           </ul>
         </div>
-        <button className={css.btnAppointment} type='button'>Make an appointment</button>
+        <button className={css.btnAppointment} type='button'  onClick={() => setIsPopupOpen(true)}>Make an appointment</button>
       </div>
     </div>
+    <Popup  isOpen={isPopupOpen}
+        onClose={() => setIsPopupOpen(false)} card={card}/>
+        </>
   );
 };
 
