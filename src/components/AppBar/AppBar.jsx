@@ -46,7 +46,7 @@ const AppBar = ({
                       <use href={`/icons/sprite.svg?v=${Date.now()}#icon-person`}></use>
                     </svg>
                     </div>
-                    <span  className={css.userName}>{userName}</span>
+                    <span className={css.userName}>{userName}</span>
                     <button
                       className={css.btnLogout}
                       onClick={() => dispatch(logoutUser())}
@@ -70,7 +70,7 @@ const AppBar = ({
                     className={css.btnRegistration}
                     onClick={() => {
                       setIsAuthModalOpen(true);
-                      setAuthType('lregister');
+                      setAuthType('register');
                     }}
                   >
                     Registration

@@ -62,6 +62,8 @@ const Layout = () => {
           <ModalMenu
             isOpen={isModalOpen}
             onClose={() => setIsModalOpen(false)}
+             setIsAuthModalOpen={setIsAuthModalOpen}
+          setAuthType={setAuthType}
           />
         )}
         {/* одне модальне вікно для Login + Registration */}

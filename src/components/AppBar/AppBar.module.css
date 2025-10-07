@@ -153,7 +153,7 @@ stroke: var(--secondary-color);
     margin-left: auto;
     align-self: center;
     cursor: pointer;
-    background-color: var(--bg-main-color);
+    background-color: transparent;
 }
 
 .closeIcon {

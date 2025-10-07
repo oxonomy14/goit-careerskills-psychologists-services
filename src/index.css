@@ -26,17 +26,40 @@ body {
   box-sizing: border-box;
   font-family: var(--font-family);
   overflow-x: hidden;
-  /* background-color: var(--bg-main-color); */
-}
 
+}
+ /* <body class="theme-blue"> */
 body.theme-blue {
-  --font-family: 'Inter', sans-serif;
-  --bg-color: #fbfbfb;
+ --font-family: 'Inter', sans-serif;
+  --bg-main-color: #fbfbfb;
+  --bg-secondary-color: #f3f3f3;
   --text-strong: #191a15;
   --text-normal: rgba(25, 26, 21, 0.5);
   --text-muted: #8a8a89;
-  --primary-color: #3470ff;
-  --secondary-color: rgba(52, 112, 255, 0.2);
+  --primary-color: #255ee8;
+  --secondary-color: #3470ff;
+  --icon-people: #fbc75e;
+  --icon-question: #54be96;
+   --icon-star: #fbc75e;
+   --text-price: #38cd3e;
+   --bg-avatar-review: rgba(84, 190, 150, 0.2);
+}
+ /* <body class="theme-orange"> */
+
+body.theme-orange {
+ --font-family: 'Inter', sans-serif;
+  --bg-main-color: #fbfbfb;
+  --bg-secondary-color: #f3f3f3;
+  --text-strong: #191a15;
+  --text-normal: rgba(25, 26, 21, 0.5);
+  --text-muted: #8a8a89;
+  --primary-color: #f37113;
+  --secondary-color: #fc832c;
+  --icon-people: #fbc75e;
+  --icon-question: #54be96;
+   --icon-star: #fbc75e;
+   --text-price: #38cd3e;
+   --bg-avatar-review: rgba(84, 190, 150, 0.2);
 }
 
 section {
