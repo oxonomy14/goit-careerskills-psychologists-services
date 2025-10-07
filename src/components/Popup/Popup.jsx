@@ -136,11 +136,12 @@ const Popup = ({ isOpen, onClose, card }) => {
                         className={css.inputTime}
                         popperClassName={css.timeDropdown} 
                       />
-                      <svg width={20} height={20} className={css.timeIcon}>
+                
+                       <svg width={20} height={20} className={css.timeIcon}>
                         <use
                           href={`/icons/sprite.svg?v=${Date.now()}#icon-clock`}
                         ></use>
-                      </svg>
+                      </svg> 
 
                       <ErrorMessage
                         name="bookingTime"
