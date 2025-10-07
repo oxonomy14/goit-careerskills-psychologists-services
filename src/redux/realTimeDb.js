@@ -6,7 +6,7 @@ import { db } from "../firebase/firebase";
 // Thunk для завантаження психологів з пагінацією
 export const fetchPsychologists = createAsyncThunk(
   "psychologists/fetchPsychologists",
-  async ({ lastKey = null, pageSize = 4 } = {}, { rejectWithValue }) => {
+  async ({ lastKey = null, pageSize = 3 } = {}, { rejectWithValue }) => {
 
  // штучна помилка
   //  throw new Error("Тестова помилка завантаження");

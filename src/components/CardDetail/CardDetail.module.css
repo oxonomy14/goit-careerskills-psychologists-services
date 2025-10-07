@@ -1,8 +1,10 @@
 .cardItem {
-    display: flex;
-    gap: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
 }
 
+/* ==== АВАТАР ==== */
 .avatar {
   display: flex;
   justify-content: center;
@@ -11,215 +13,303 @@
   border-radius: 30px;
   width: 120px;
   height: 120px;
-    position: relative;
+  position: relative;
+  flex-shrink: 0;
 }
 
 .avatarImg {
   border-radius: 15px;
   width: 96px;
   height: 96px;
-
+  object-fit: cover;
 }
 
 .circleIcon {
-     fill: var(--secondary-color); 
-     position: absolute;
-     top: 9px;
-     right: 14px;
-
+  fill: var(--secondary-color);
+  position: absolute;
+  top: 9px;
+  right: 14px;
 }
 
+/* ==== ІНФО ==== */
 .infoContainer {
-    flex: 1; 
+  flex: 1 1 300px;
+  min-width: 240px;
 }
 
 .infoRow {
-    display: flex;
+  display: flex;
   justify-content: space-between;
-    align-items: center; 
-  width: 100%;
-  margin-bottom: 8px;
-    
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
 }
 
 .infoLeftBox {
-
-font-weight: 500;
-font-size: 16px;
-line-height: 150%;
-color: var(--text-muted);
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--text-muted);
 }
 
 .infoRightBox {
-    display: flex;
-    align-items: center;
-
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
-
 .infoRating {
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .infoRating p {
-
-font-weight: 500;
-font-size: 16px;
-line-height: 150%;
-color: var(--text-strong);
-margin-right: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--text-strong);
 }
 
 .starIcon {
-   fill: var(--icon-star);
-   margin-right: 8px;
+  fill: var(--icon-star);
 }
 
 .vLineIcon {
-stroke: rgba(25, 26, 21, 0.2);
-margin-right: 16px;
-
+  stroke: rgba(25, 26, 21, 0.2);
+  height: 16px;
 }
 
 .infoPrice {
-
-font-weight: 500;
-font-size: 16px;
-line-height: 150%;
-color: var(--text-strong);
-margin-right: 28px;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--text-strong);
 }
 
 .infoPrice span {
-color: var(--text-price);
+  color: var(--text-price);
 }
 
+/* ==== ІМ'Я ==== */
 .name {
-
-font-weight: 500;
-font-size: 24px;
-line-height: 100%;
-color: var(--text-strong);
-margin-bottom: 24px;
+  font-weight: 600;
+  font-size: clamp(20px, 2vw, 26px);
+  color: var(--text-strong);
+  margin: 12px 0 20px;
 }
 
+/* ==== СПИСОК ==== */
 .list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px 4px;
-    margin-bottom: 24px;
-
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 6px;
+  margin-bottom: 20px;
 }
 
 .item {
-border-radius: 24px;
-padding: 8px 16px;
-background-color: var(--bg-secondary-color);
+  border-radius: 24px;
+  padding: 8px 14px;
+  background-color: var(--bg-secondary-color);
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--text-muted);
+  white-space: nowrap;
 
-font-weight: 500;
-font-size: 16px;
-line-height: 150%;
-color: var(--text-muted);
-white-space: nowrap;
 }
 
 .item span {
-    color: var(--text-strong);
+  color: var(--text-strong);
 }
 
+/* ==== ОПИС ==== */
 .description {
-font-weight: 400;
-font-size: 16px;
-line-height: 125%;
-color: rgba(25, 26, 21, 0.5);
-margin-bottom: 48px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  color: rgba(25, 26, 21, 0.6);
+  margin-bottom: 32px;
 }
 
+/* ==== ВІДГУКИ ==== */
 .review {
   display: flex;
   flex-direction: column;
 }
 
 .reviewList {
-display: flex;
-flex-direction: column;
-gap: 25px;
-margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 40px;
 }
 
 .reviewItem {
-
+  background-color: var(--bg-secondary-color, #f9f9f9);
+  border-radius: 16px;
+  padding: 16px;
 }
 
 .reviewInfo {
   display: flex;
+  align-items: center;
   gap: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .avatarReview {
-border-radius: 50%;
-width: 44px;
-height: 44px;
-background-color: var(--bg-avatar-review);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  background-color: var(--bg-avatar-review);
   display: flex;
   align-items: center;
   justify-content: center;
-opacity: 1;
 }
 
 .avatarReview span {
-font-weight: 500;
-font-size: 20px;
-line-height: 100%;
-color: var( --primary-color);
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--primary-color);
 }
 
 .avatarName {
-font-weight: 500;
-font-size: 16px;
-line-height: 125%;
-color: var(--text-strong);
-margin-bottom: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--text-strong);
+  margin-bottom: 4px;
 }
 
 .reviewRate {
   display: flex;
   gap: 8px;
   align-items: center;
-
 }
 
 .reviewStarIcon {
-   fill: var(--icon-star);
-
+  fill: var(--icon-star);
 }
 
 .reviewRateTxt {
-font-weight: 500;
-font-size: 14px;
-line-height: 129%;
-color: var(--text-strong);
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--text-strong);
 }
 
 .reviewComment {
-
-font-weight: 400;
-font-size: 16px;
-line-height: 125%;
-color: var(--text-muted);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  color: var(--text-muted);
 }
 
+/* ==== КНОПКА ==== */
 .btnAppointment {
   border-radius: 30px;
-padding: 14px 32px;
-width: 227px;
-height: 48px;
-background: var(--primary-color);
-font-weight: 500;
-font-size: 16px;
-line-height: 125%;
-letter-spacing: -0.01em;
-color: var(--bg-main-color);
+  padding: 14px 32px;
+  width: 227px;
+  height: 48px;
+  background: var(--primary-color);
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--bg-main-color);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+white-space: nowrap;
+}
+
+.btnAppointment:hover {
+  background-color: var(--primary-hover, #45a984);
+}
+
+/* ====== 📱 Tablet ====== */
+@media (max-width: 992px) {
+  .cardItem {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .infoContainer {
+    width: 100%;
+  }
+
+  .infoRow {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .infoRightBox {
+    justify-content: center;
+  }
+
+  .list {
+    justify-content: center;
+  }
+
+  .reviewItem {
+    text-align: left;
+  }
+}
+
+/* ==== 📱 Телефон ==== */
+@media (max-width: 600px) {
+  .cardItem {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .avatarImg {
+    width: 80px;
+    height: 80px;
+  }
+
+  .name {
+    font-size: 20px;
+  }
+
+  .item {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  .description {
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .btnAppointment {
+    width: 100%;
+  }
+}
+
+/* ======  MOBILE ====== */
+@media (max-width: 425px) {
+  .list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item {
+   max-width: 320px;
+    text-align: center;
+        white-space: wrap;
+    overflow-wrap: break-word;
+
+  }
+
+  .infoRightBox {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .btnAppointment {
+    font-size: 15px;
+    height: 44px;
+  }
 }

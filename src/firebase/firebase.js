@@ -1,18 +1,17 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-//import { getFirestore } from "firebase/firestore";
 import { getDatabase } from "firebase/database";
 import { getFirestore } from "firebase/firestore";
 
 
 const firebaseConfig = {
-apiKey: "AIzaSyAW3YJZyNf3LjrhMgzOZFlx3snP1QnIfbU",
-  authDomain: "psychologists-services-1785a.firebaseapp.com",
-  projectId: "psychologists-services-1785a",
-  databaseURL: "https://psychologists-services-1785a-default-rtdb.asia-southeast1.firebasedatabase.app",
-  storageBucket: "psychologists-services-1785a.appspot.com",
-  messagingSenderId: "999312646709",
-  appId: "1:999312646709:web:8b25bcd6f98c48e2fbc77c"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 const app = initializeApp(firebaseConfig);

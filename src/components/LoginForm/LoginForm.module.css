@@ -1,85 +1,118 @@
 .form {
-
+  width: 100%;
+  max-width: 480px; 
+  margin: 0 auto;
+  padding: 0 16px; 
 }
 
+/* ==== Заголовок ==== */
 .formTitle {
-font-family: var(--font-family);
-font-weight: 500;
-font-size: 40px;
-line-height: 120%;
-letter-spacing: -0.02em;
-color: var(--text-strong);
-margin-bottom: 20px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: clamp(24px, 5vw, 40px); 
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: var(--text-strong);
+  margin-bottom: 20px;
+  text-align: center;
 }
 
+/* ==== Опис ==== */
 .formDesc {
-font-family: var(--font-family);
-font-weight: 400;
-font-size: 16px;
-line-height: 125%;
-color: rgba(25, 26, 21, 0.5);
-margin-bottom: 40px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  color: rgba(25, 26, 21, 0.5);
+  margin-bottom: 40px;
+  text-align: center;
 }
 
+/* ==== Контейнери полів ==== */
 .fieldWrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 40px;
 }
 
 .field {
-position: relative;
+  position: relative;
 }
 
+/* ==== Інпути ==== */
 .input {
-border: 1px solid rgba(25, 26, 21, 0.1);
-border-radius: 12px;
-padding: 16px 18px 16px 18px;
-width: 438px;
-height: 52px;
-font-family: var(--font-family);
-font-weight: 400;
-font-size: 16px;
-line-height: 125%;
-color: var(--text-strong);
-
+  border: 1px solid rgba(25, 26, 21, 0.1);
+  border-radius: 12px;
+  padding: 16px 18px;
+  width: 100%;
+  height: 52px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--text-strong);
+  box-sizing: border-box;
 }
 
 .input::placeholder {
-    color: var(--text-strong);
+  color: var(--text-strong);
 }
 
+/* ==== Іконка ока ==== */
 .eyeBtn {
-    position: absolute;
-    top: 16px;
-    right: 18px;
-    border-color: transparent;
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
 }
 
-.eyeIcon{
-    fill: none;
-    stroke: var(--text-strong);
+.eyeIcon {
+  fill: none;
+  stroke: var(--text-strong);
 }
 
+/* ==== Повідомлення про помилку ==== */
 .error {
-padding: 10px;
-font-weight: 400;
-font-size: 14px;
-line-height: 125%;
-color: var(--text-muted);
+  padding: 6px 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 125%;
+  color: var(--text-muted);
 }
 
+/* ==== Кнопка ==== */
 .btn {
-    font-family: var(--font-family);
-font-weight: 500;
-font-size: 16px;
-line-height: 125%;
-letter-spacing: -0.01em;
-color: #fbfbfb;
-border-radius: 30px;
-padding: 16px 189px;
-width: 438px;
-height: 52px;
-background-color: var(--primary-color);
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  color: #fbfbfb;
+  border-radius: 30px;
+  padding: 16px;
+  width: 100%;
+  height: 52px;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+
+/* ==== Адаптивність ==== */
+@media (max-width: 480px) {
+  .formTitle {
+    font-size: 28px;
+  }
+
+  .formDesc {
+    font-size: 14px;
+  }
+
+  .btn {
+    height: 48px;
+    font-size: 15px;
+  }
 }

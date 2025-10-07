@@ -1,8 +1,11 @@
 .cardItem {
-    display: flex;
-    gap: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;  
 }
 
+
+/* ====== АВАТАР ====== */
 .avatar {
   display: flex;
   justify-content: center;
@@ -11,135 +14,218 @@
   border-radius: 30px;
   width: 120px;
   height: 120px;
-    position: relative;
+  position: relative;
+  flex-shrink: 0;
 }
 
 .avatarImg {
   border-radius: 15px;
   width: 96px;
   height: 96px;
-
+  object-fit: cover;
 }
 
 .circleIcon {
-     fill: var(--secondary-color); 
-     position: absolute;
-     top: 9px;
-     right: 14px;
-
+  fill: var(--secondary-color);
+  position: absolute;
+  top: 9px;
+  right: 14px;
 }
 
+/* ====== ІНФО ====== */
 .infoContainer {
-    flex: 1; 
+  flex: 1;
+  min-width: 250px;
 }
 
 .infoRow {
-    display: flex;
+  display: flex;
   justify-content: space-between;
-    align-items: center; 
-  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
   margin-bottom: 8px;
-    
 }
 
 .infoLeftBox {
-
-font-weight: 500;
-font-size: 16px;
-line-height: 150%;
-color: var(--text-muted);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--text-muted);
 }
 
 .infoRightBox {
-    display: flex;
-    align-items: center;
-
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .infoRating {
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .infoRating p {
-
-font-weight: 500;
-font-size: 16px;
-line-height: 150%;
-color: var(--text-strong);
-margin-right: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--text-strong);
 }
 
 .starIcon {
-   fill: var(--icon-star);
-   margin-right: 8px;
+  fill: var(--icon-star);
+  margin-right: 6px;
 }
 
 .vLineIcon {
-stroke: rgba(25, 26, 21, 0.2);
-margin-right: 16px;
-
+  stroke: rgba(25, 26, 21, 0.2);
 }
 
 .infoPrice {
-
-font-weight: 500;
-font-size: 16px;
-line-height: 150%;
-color: var(--text-strong);
-margin-right: 28px;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--text-strong);
 }
 
 .infoPrice span {
-color: var(--text-price);
+  color: var(--text-price);
 }
 
 .name {
-
-font-weight: 500;
-font-size: 24px;
-line-height: 100%;
-color: var(--text-strong);
-margin-bottom: 24px;
+  font-weight: 600;
+  font-size: clamp(18px, 2vw, 24px);
+  color: var(--text-strong);
+  margin: 12px 0 20px;
 }
 
+/* ====== СПИСОК ====== */
 .list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px 4px;
-    margin-bottom: 24px;
-
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 6px;
+  margin-bottom: 20px;
 }
 
 .item {
-border-radius: 24px;
-padding: 8px 16px;
-background-color: var(--bg-secondary-color);
-
-font-weight: 500;
-font-size: 16px;
-line-height: 150%;
-color: var(--text-muted);
-white-space: nowrap;
+  border-radius: 24px;
+  padding: 8px 14px;
+  background-color: var(--bg-secondary-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--text-muted);
+  white-space: nowrap;
 }
 
 .item span {
-    color: var(--text-strong);
+  color: var(--text-strong);
 }
 
+/* ====== ОПИС + READ MORE ====== */
 .description {
-font-weight: 400;
-font-size: 16px;
-line-height: 125%;
-color: rgba(25, 26, 21, 0.5);
-margin-bottom: 14px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  color: rgba(25, 26, 21, 0.6);
+  margin-bottom: 12px;
 }
 
 .readMore {
-font-weight: 500;
-font-size: 16px;
-line-height: 150%;
-text-decoration: underline;
-text-decoration-skip-ink: none;
-color: var(--text-strong);
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: underline;
+  color: var(--text-strong);
+  transition: color 0.2s ease;
+}
+
+.readMore:hover {
+  color: var(--text-accent, #54be96);
+}
+
+/* ====== 📱 Tablet ====== */
+@media (max-width: 768px) {
+  .cardItem {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .avatarImg {
+    width: 80px;
+    height: 80px;
+  }
+
+  .infoContainer {
+    width: 100%;
+  }
+
+  .infoRow {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .infoRightBox {
+    justify-content: center;
+  }
+
+  .list {
+    justify-content: center;
+  }
+
+  .name {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 135%;
+  }
+
+  .item {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+
+  .readMore {
+    font-size: 15px;
+  }
+}
+
+/* ======  MOBILE ====== */
+@media (max-width: 425px) {
+  .cardItem {
+    padding: 12px;
+  }
+
+  .infoRightBox {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .list {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .item {
+    max-width: 320px;
+    text-align: center;
+    white-space: wrap;
+    overflow-wrap: break-word;
+
+  }
+
+  .description {
+    text-align: left;
+  }
 }
