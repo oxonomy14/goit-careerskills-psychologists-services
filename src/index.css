@@ -97,26 +97,53 @@ button {
 }
 
 /* --- Time Dropdown --- */
-.timeDropdown {
-  background-color: #fff !important;
-  border-radius: 12px !important;
-  box-shadow: 0 20px 69px 0 rgba(0, 0, 0, 0.07) !important;
-  font-family: var(--font-family) !important;
-  overflow: hidden;
-}
 
-.timeDropdown .react-datepicker__time-container {
+
+.react-datepicker {
   border: none !important;
-  width: 100% !important;
 }
 
-.timeDropdown .react-datepicker__time-list-item {
-  padding: 10px 16px !important;
+.react-datepicker__header {
+    text-align: left !important;
+    background-color: #fff !important;
+    border-bottom: none !important;
+    border-top-left-radius: 12px !important;
+    padding: 16px 34px 16px 16px !important;
+
+    
+}
+
+.react-datepicker-time__header {
+    font-family: var(--font-family) !important;
+font-weight: 500 !important;
+font-size: 16px !important;
+line-height: 150% !important;
+color: var(--text-strong) !important;
+}
+
+.react-datepicker__time {
+
+  
+}
+
+.react-datepicker__time-container {
+   width: 150px !important;  
+    background-color: #fff !important;
+    border-radius: 12px !important;
+box-shadow: 0 20px 69px 0 rgba(0, 0, 0, 0.07) !important;
+}
+
+.react-datepicker__time-list-item {
   cursor: pointer !important;
-  font-size: 16px !important;
+  font-family: var(--font-family) !important;
+font-weight: 500 !important;
+font-size: 16px !important;
+line-height: 125% !important;
+text-align: center !important;
+color: rgba(25, 26, 21, 0.3) !important;
 }
 
 .timeDropdown .react-datepicker__time-list-item--selected {
-  background-color: #3470ff !important;
+  background-color: var( --secondary-color) !important;
   color: #fff !important;
 } 

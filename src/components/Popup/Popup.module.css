@@ -121,11 +121,12 @@
   resize: none;
 }
 
-.field:focus,
+.input:focus,
 .inputPhone:focus,
 .inputTime:focus,
 .textarea:focus {
-    color: rgba(25, 26, 21, 0.4);
+  border: 1px solid var(--secondary-color);
+  outline: none;
 }
 
 .timeIcon {

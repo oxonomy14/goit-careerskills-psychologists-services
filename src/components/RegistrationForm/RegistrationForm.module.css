@@ -138,6 +138,11 @@ background-color: var(--primary-color);
   color: var(--text-strong);
 }
 
+.input:focus {
+  border: 1px solid var(--secondary-color);
+  outline: none;
+}
+
 .eyeBtn {
   position: absolute;
   top: 16px;
