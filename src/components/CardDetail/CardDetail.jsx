@@ -1,4 +1,4 @@
-import css from './Carddetail.module.css';
+import css from './CardDetail.module.css';
 import BtnFavorite from '../BtnFavorite/BtnFavorite';
 import Popup from '../Popup/Popup';
 import { useState } from 'react';
