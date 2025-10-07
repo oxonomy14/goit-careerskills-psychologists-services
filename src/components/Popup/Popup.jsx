@@ -45,11 +45,11 @@ const Popup = ({ isOpen, onClose, card }) => {
     } catch (e) {
       console.error(e);
 
-      // Якщо є текст помилки від сервера або fetch
+      
       const errorMessage =
-        e?.response?.data?.message || // axios: помилка з бекенду
-        e?.message || // js помилка
-        'Failed to send. Please try again.'; // запасний варіант
+        e?.response?.data?.message || 
+        e?.message || 
+        'Failed to send. Please try again.'; 
 
       toast.error(errorMessage);
     } finally {
