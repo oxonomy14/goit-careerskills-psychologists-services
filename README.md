@@ -89,7 +89,7 @@ npm run build
 ## 🌍 Deployment
 
 Deployed on **Vercel/Netlify**:  
-👉 [Live Demo]()
+👉 [Live Demo](https://goit-careerskills-psychologists-git-728609-oxonomy14s-projects.vercel.app/)
 
 ---
 
